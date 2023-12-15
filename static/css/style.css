@@ -1,0 +1,524 @@
+@charset "UTF-8";
+
+/*
+ * Style definition for my website
+ */
+
+/* Fonts */
+@font-face {
+    font-family: 'Fuzzy Bubbles Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Fuzzy Bubbles Regular'), url('../fonts/FuzzyBubbles-Regular.tff') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fuzzy Bubbles Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Fuzzy Bubbles Bold'), url('../fonts/FuzzyBubbles-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Josefin Sans Bold'), url('../fonts/JosefinSans-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Josefin Sans Regular'), url('../fonts/JosefinSans-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+/* Markup */
+html {
+    font-size: 15px;
+}
+
+html, body {
+    height: auto;
+}
+
+body {
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
+    /* padding-left: 12.5%; */
+    font-family: "Josefin Sans Regular", sans-serif;
+    background-color: #f9f9f9;
+    color: #111;
+    max-width: 55%;
+    display: block;
+}
+
+.content {
+    flex: 1 0 auto;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sticky-footer {
+    flex-shrink: 0;
+    text-align: left;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-weight: 400;
+    line-height: 1;
+}
+
+h1, h2 {
+    font-family: "Fuzzy Bubbles Bold", sans-serif;
+}
+
+h3, h4, h5 {
+        font-family: "Josefin Sans Bold", sans-serif;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    margin-top: 2.1rem;
+    margin-bottom: 0.75rem;
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+}
+
+hr {
+    margin-left: 0;
+    width: 87%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.55), rgba(192, 204, 153, 0.25));
+}
+
+em {
+    font-family: "Linux Libertine Bold", sans-serif;
+    font-style: normal;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile-picture {
+    flex: 10%;
+}
+
+.profile-details {
+    margin-left: 4rem;
+    flex: 55%;
+}
+
+ul.profile-links {
+    list-style-type: none;
+    margin-left: -2.4rem;
+    margin-top: -1rem;
+}
+
+ul.profile-links li {
+    display: inline;
+}
+
+p.subtitle {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1;
+}
+
+.numeral {
+    font-family: et-book-roman-old-style;
+}
+
+article {
+    padding: 2rem 0rem;
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: justify;
+}
+
+p,
+dl,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+blockquote {
+    font-size: 1.4rem;
+}
+
+blockquote p {
+    width: 55%;
+    margin-right: 40px;
+}
+
+blockquote footer {
+    width: 55%;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+section > p,
+section > footer,
+section > table {
+    width: 85%;
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section > dl,
+section > ol,
+section > ul {
+    width: 75%;
+    -webkit-padding-start: 5%;
+}
+
+dt:not(:first-child),
+li:not(:first-child) {
+    margin-top: 0.25rem;
+}
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0 0 3em 0;
+}
+
+figcaption {
+    float: right;
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%;
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%;
+}
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+    color: inherit;
+}
+
+a.icon:link {
+    background: unset;
+    text-shadow: unset;
+    border: 0;
+}
+
+a.icon img {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0;
+    transition: opacity .3s;
+}
+
+a.icon img:hover {
+    opacity: 0.3;
+}
+
+a:link {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+}
+
+a:hover {
+    color: #eed8fc;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    a:link {
+        background-position-y: 87%, 87%, 87%;
+    }
+}
+
+/* Adds dark mode
+@media (prefers-color-scheme: dark) {
+    a:link, .tufte-underline, .hover-tufte-underline:hover {
+        text-shadow: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515, 0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515, -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515, -0.15em 0 #151515;
+    }
+}
+*/
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+img.framed {
+  box-shadow:
+    -50px -50px 0 -40px #ffdef2,
+    50px 50px 0 -40px rgba(255, 225, 0, 0.3);
+}
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Publications & talks */
+ul.publication, ul.talk {
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 25px;
+    line-height: 1.0;
+}
+
+ul.publication li, ul.talk li {
+    padding: 1px 0;
+}
+
+.title {
+    font-family: "Linux Libertine Bold";
+    font-size: 1.5rem;
+}
+
+.authors, .authors2 {
+    font-style: normal;
+    font-family: "Linux Libertine Italic", sans-serif;
+    text-align: left;
+}
+
+.authors ul, .authors2 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.authors ul li, .authors2 ul li {
+    display: inline;
+}
+
+/* Three or more authors and two authors. */
+.authors ul li:not(:last-of-type)::after {
+    content: ", ";
+}
+
+.authors ul li:not(:first-of-type):last-of-type::before,
+.authors2 ul li:not(:first-of-type)::before {
+    content: " and ";
+}
+
+/* Single author. */
+.authors ul li:first-of-type:last-of-type {
+}
+
+.info, .misc {
+    /* no particular style */
+}
+
+.info em {
+    font-family: "Linux Libertine Italic", sans-serif;
+}
+
+li.instances ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.1;
+}
+
+li.instances ul li, li.info {
+    display: inline;
+}
+
+li.instances ul.attachments, li.info ul.attachments {
+    margin-left: 0.8rem;
+}
+
+ul.attachments {
+    display: inline;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.attachments li {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+ul.attachments li:before {
+    content: '[';
+}
+
+ul.attachments li:after {
+    content: ']';
+}
+
+ul.compact {
+    list-style-type: none;
+}
+
+ul.compact li {
+    display: inline;
+}
+
+ul.compact li:not(:last-child):after {
+    content: ', ';
+}
+
+ul.compact li:last-child:after {
+    content: '.';
+}
+
+/* Small screen devices */
+@media (max-width: 1125px) {
+    body {
+        width: 90%;
+        /* padding-left: 1%; */
+        /* padding-right: 1%; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2.5%;
+        margin-bottom: auto;
+        max-width: 85%;
+        display: block;
+    }
+    .content {
+        width: 95%;
+    }
+
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+        width: 100%;
+    }
+
+    section > dl,
+    section > ol,
+    section > ul {
+        width: 90%;
+    }
+
+    figure {
+        max-width: 90%;
+    }
+
+    figcaption,
+    figure.fullwidth figcaption {
+        margin-right: 0%;
+        max-width: none;
+    }
+
+    blockquote {
+        margin-left: 1.5em;
+        margin-right: 0em;
+    }
+
+    blockquote p,
+    blockquote footer {
+        width: 100%;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .profile {
+        display: block;
+    }
+
+    .profile-picture {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .profile-picture img {
+        max-height: 400px;
+        max-width: 400px;
+    }
+
+    .profile-details {
+        margin-left: 0;
+        flex: 100%;
+    }
+
+    section {
+        text-align: left;
+    }
+
+    ul.attachments {
+        display: block;
+        list-style-type: none;
+        padding-left: 10px;
+    }
+
+    article {
+        padding: 1rem 0rem;
+    }
+}
+
+mark {
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    #ffdef2,
+    #ffdef2 4%,
+    rgba(255, 225, 0, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
